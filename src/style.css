@@ -14,6 +14,7 @@ body {
 #root {
   max-width: 75rem;
   margin: 0 auto;
+  height: 80vh;
 }
 
 .header {
@@ -21,6 +22,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
 }
 
 .logo {
@@ -205,9 +213,39 @@ ul {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.disputed {
+  color: #ef4444;
+  font-weight: 600;
+  margin-right: 0.6rem;
+}
+
 @media (max-width: 900px) {
   .main {
     grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fact-form {
+    padding: 16px;
+  }
+
+  .fact {
+    padding: 12px 16px;
   }
 }
 
@@ -216,10 +254,12 @@ ul {
     flex-direction: column;
     gap: 1rem;
   }
-}
 
-/* kAxMtLifaEgn1uLB */
+  .fact-form {
+    padding: 16px;
+  }
 
-.hidden {
-  display: none;
+  .fact {
+    padding: 12px 16px;
+  }
 }
